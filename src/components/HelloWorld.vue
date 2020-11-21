@@ -1,22 +1,6 @@
 <template>
 <span>
-      <v-avatar
-        class="mr-3"
-        color="grey lighten-5"
-        size="70"
-      >
-        <v-img
-          contain
-          max-height="70%"
-          src="../assets/logo.png"
-        ></v-img>
-      </v-avatar>
-
-      <v-toolbar-title class="font-weight-black headline">
-        The Shelf Life
-      </v-toolbar-title>
-
-    <v-content>
+      <v-content>
       <section id="hero">
         <v-row no-gutters>
           <v-img
