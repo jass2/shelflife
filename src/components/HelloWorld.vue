@@ -1,11 +1,9 @@
 <template>
 <span>
-      <v-content>
       <section id="hero">
-        <v-row no-gutters>
+        <v-row>
           <v-img
-            :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-            src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
+            src="../assets/center.jpg"
           >
             <v-theme-provider dark>
               <v-container fill-height>
@@ -20,19 +18,12 @@
                     tag="h1"
                   >
                     <span
-                    :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
-                      class="font-weight-light"
-                    >
-                      WELCOME TO
-                    </span>
-
-                    <br>
-
-                    <span
                       :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
                       class="font-weight-black"
                     >
-                      VUETIFY
+                    <h1 class="white--text">
+                      The Shelf Life Blog
+                    </h1>
                     </span>
 
                   </v-col>
@@ -71,41 +62,28 @@
             class="mx-auto title font-weight-light mb-8"
             max-width="720"
           >
-            Vuetify is the #1 component library for Vue.js and has been in active development since 2016. The goal of the project is to provide users with everything that is needed to build rich and engaging web applications using the Material Design specification. It accomplishes that with a consistent update cycle, Long-term Support (LTS) for previous versions, responsive community engagement, a vast ecosystem of resources and a dedication to quality components.
+              Here's a good spot for a bio idk what to write here right now
           </v-responsive>
 
           <v-avatar
             class="elevation-12 mb-12"
             size="128"
           >
-            <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
+            <v-img src="../assets/em.jpg"></v-img>
           </v-avatar>
 
-          <div></div>
-
-          <v-btn
-            color="grey"
-            href="https://vuetifyjs.com"
-            outlined
-            large
-          >
-            <span class="grey--text text--darken-1 font-weight-bold">
-              Vuetify Documentation
-            </span>
-          </v-btn>
         </v-container>
 
         <div class="py-12"></div>
       </section>
 
-      <section
+      <!-- <section
         id="features"
         class="grey lighten-3"
       >
-        <div class="py-12"></div>
+        <div class="py-12"></div> -->
 
-        <v-container class="text-center">
-          <h2 class="display-2 font-weight-bold mb-3">VUETIFY FEATURES</h2>
+        <!-- <v-container class="text-center">
 
           <v-responsive
             class="mx-auto mb-12"
@@ -155,91 +133,17 @@
               </v-card>
             </v-col>
           </v-row>
-        </v-container>
+        </v-container> -->
 
-        <div class="py-12"></div>
-      </section>
+        <!-- <div class="py-12"></div>
+      </section> -->
 
       <section id="stats">
         <v-parallax
-          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-          src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+          :height="$vuetify.breakpoint.smAndDown ? 900 : 700"
+          src="../assets/shlef.jpg"
         >
-          <v-container fill-height>
-            <v-row class="mx-auto">
-              <v-col
-                v-for="[value, title] of stats"
-                :key="title"
-                cols="12"
-                md="3"
-              >
-                <div class="text-center">
-                  <div
-                    class="display-3 font-weight-black mb-4"
-                    v-text="value"
-                  ></div>
-
-                  <div
-                    class="title font-weight-regular text-uppercase"
-                    v-text="title"
-                  ></div>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
         </v-parallax>
-      </section>
-
-      <section id="blog">
-        <div class="py-12"></div>
-
-        <v-container>
-          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Blog</h2>
-
-          <v-responsive
-            class="mx-auto mb-12"
-            width="56"
-          >
-            <v-divider class="mb-1"></v-divider>
-
-            <v-divider></v-divider>
-          </v-responsive>
-
-          <v-row>
-            <v-col
-              v-for="({ src, text, title }, i) in articles"
-              :key="i"
-              cols="12"
-              md="4"
-            >
-              <v-img
-                :src="src"
-                class="mb-4"
-                height="275"
-                max-width="100%"
-              ></v-img>
-
-              <h3
-                class="font-weight-black mb-4 text-uppercase"
-                v-text="title"
-              ></h3>
-
-              <div
-                class="title font-weight-light mb-5"
-                v-text="text"
-              ></div>
-
-              <v-btn
-                class="ml-n4 font-weight-black"
-                text
-              >
-                Continue Reading
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-
-        <div class="py-12"></div>
       </section>
 
       <v-sheet
@@ -302,7 +206,7 @@
                 cols="auto"
               >
                 <v-btn
-                  color="accent"
+                  color="face"
                   x-large
                 >
                   Submit
@@ -313,7 +217,6 @@
         </v-container>
         <div class="py-12"></div>
       </v-sheet>
-    </v-content>
 </span>
 </template>
 

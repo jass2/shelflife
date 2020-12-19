@@ -6,7 +6,7 @@
       dark
     >
       <div class="d-flex align-center">
-          <h2 class="black--text ">The Shelf Life Placeholder</h2>
+          <h2 class="white--text ">The Shelf Life Placeholder</h2>
       </div>
 
       <v-spacer></v-spacer>
@@ -17,8 +17,8 @@
         text
         light
       >
-        <span class="mr-2">Latest Post</span>
-        <v-icon>mdi-open-in-new</v-icon>
+        <span class="mr-2 white--text">Latest Post</span>
+        <v-icon color="white">mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 
