@@ -2,24 +2,23 @@
   <v-app>
     <v-app-bar
       app
-      color="primary"
-      dark
+      color="white"
     >
       <div class="align-center d-flex">
-          <h2 @click="page = 0" class="white--text text-no-wrap" style="user-select: none">The Shelf Life</h2>
+          <v-img @click="page = 0" max-height="70" max-width="100" src="./assets/shlef2.png"></v-img>
       </div>
 
       <v-divider class="pl-4 pr-4" inset vertical/>
     <v-tabs
-      background-color="primary"
+      background-color="white"
       center-active
       dark
     >
-      <v-tab @click="page = 1">Blog</v-tab>
-      <v-tab @click="page = 2">Instagram</v-tab>
-      <v-tab @click="page = 3">Tik Tok</v-tab>
-      <v-tab @click="page = 4">Bio</v-tab>
-      <v-tab @click="page = 5">Merch</v-tab>
+      <v-tab class="primary--text" @click="page = 1">Blog</v-tab>
+      <v-tab class="primary--text" @click="page = 2">Instagram</v-tab>
+      <v-tab class="primary--text" @click="page = 3">Tik Tok</v-tab>
+      <v-tab class="primary--text" @click="page = 4">Bio</v-tab>
+      <v-tab class="primary--text" @click="page = 5">Merch</v-tab>
 
     </v-tabs>
       <v-spacer/>
@@ -30,8 +29,8 @@
         text
         light
       >
-        <span class="mr-2 white--text">Latest Post</span>
-        <v-icon color="white">mdi-open-in-new</v-icon>
+        <span class="mr-2 primary--text">Latest Post</span>
+        <v-icon color="primary">mdi-open-in-new</v-icon>
       </v-btn>
     </v-app-bar>
 

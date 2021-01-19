@@ -5,7 +5,7 @@
           <v-img
             src="../assets/center.jpg"
           >
-            <v-theme-provider dark>
+            <v-theme-provider>
               <v-container fill-height>
                 <v-row
                   align="center"
