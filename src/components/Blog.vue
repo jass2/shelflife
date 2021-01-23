@@ -8,7 +8,6 @@
                <BlogEntry/>
             </v-row>
         </v-col>
-        <v-btn v-if="isAdmin">New Post</v-btn>
     </v-container>
     
 </template>
@@ -21,7 +20,8 @@ export default {
     },
     data () {
         return {
-            isAdmin: true
+            isAdmin: true,
+            clicked: false
         }
     }
 }

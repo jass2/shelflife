@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import { db } from '../../plugins/firebase'
 export default {
     data: () => ({
             repsieTitle: 'Broccoli Mac and Cheese',
@@ -45,8 +46,19 @@ export default {
             estimatedTime: 40,
             photos: [{'src': require('../../assets/shlef.jpg')},{'src': require('../../assets/emfingies.jpg')},{'src': require('../../assets/emfingies.jpg')},{'src': require('../../assets/emfingies.jpg')},{'src': require('../../assets/emfingies.jpg')}]
     }),
+    async created () {
+        await this.getPost()
+    },
     methods: {
-
+        async getPost() {
+            const cityRef = db.collection('recipe').doc('z82huVRpjmN0TuXUE5cn');
+            const doc = await cityRef.get();
+            if (!doc.exists) {
+                console.log('No such document!');
+            } else {
+                console.log('Document data:', doc.data());
+            }
+        }
     }
 }
 </script>
