@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import { auth, adminSignIn, db } from '../../plugins/firebase'
+// import { auth, adminSignIn, db } from '../../plugins/firebase'
 import AdminDir from './AdminDir'
 
 export default {
@@ -18,33 +18,33 @@ export default {
         credential: '',
         token: '',
         user: '',
-        validAdmin: false,
+        validAdmin: true,
         notValidAdmin: null,
-        authed: false,
-        authRef: db.collection('roles')
+        authed: true,
+        // authRef: db.collection('roles')
         }),
     created () {
-        auth.signInWithPopup(adminSignIn).then(async (result) => {
-            this.credential = result.credential
-            this.token = result.accessToken
-            this.user = result.user
-            this.authed = true
-            const adminAuth = await this.authRef.where('UID', '==', auth.currentUser.uid).where('isAdmin', '==', true).get()
-            this.validAdmin = !adminAuth.empty
-        }).catch((error) => {
-            // Handle Errors here.
-            var errorCode = error.code;
-            console.log(errorCode)
-            var errorMessage = error.message;
-            console.log(errorMessage)
-            // The email of the user's account used.
-            var email = error.email;
-            console.log(email)
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            console.log(credential)
-            this.authed = false
-        })
+        // auth.signInWithPopup(adminSignIn).then(async (result) => {
+        //     this.credential = result.credential
+        //     this.token = result.accessToken
+        //     this.user = result.user
+        //     this.authed = true
+        //     const adminAuth = await this.authRef.where('UID', '==', auth.currentUser.uid).where('isAdmin', '==', true).get()
+        //     this.validAdmin = !adminAuth.empty
+        // }).catch((error) => {
+        //     // Handle Errors here.
+        //     var errorCode = error.code;
+        //     console.log(errorCode)
+        //     var errorMessage = error.message;
+        //     console.log(errorMessage)
+        //     // The email of the user's account used.
+        //     var email = error.email;
+        //     console.log(email)
+        //     // The firebase.auth.AuthCredential type that was used.
+        //     var credential = error.credential;
+        //     console.log(credential)
+        //     this.authed = false
+        // })
     },
     methods: {
     }
